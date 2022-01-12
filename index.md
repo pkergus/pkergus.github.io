@@ -1,37 +1,12 @@
-## Welcome to GitHub Pages
+## Pauline Kergus
 
-You can use the [editor on GitHub](https://github.com/pkergus/pkergus.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+I am currently a CNRS researcher at LAPLACE, in the CODIASE GROUP, where I work on the modeling, control and analysis of energy systems.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I was previously a postdoctoral researcher at LTH (Lund, Sweden) in the Department of Automatic Control, where I worked on the modelling and control of district heating and cooling networks with Anders Rantzer through his ERC project Scalable Control of Interconnected Systems.
 
-### Markdown
+Before that, I was a PhD student at ONERA, Toulouse (France), from 2016 to 2019. My work consisted in proposing a new data-driven control design technique in the frequency-domain. I received my PhD in October 2019 from ISAE-SUPAERO, Toulouse, France. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I obtained my engineering degree from Ecole Centrale de Lyon in 2016 after a year as an exchange student in UNICAMP (Brazil) at the Faculty of Electrical Engineering and Computer science (FEEC).
 
-```markdown
-Syntax highlighted code block
+My research interests are control, system theory, model order reduction and system identification. In particular, I aim at proposing data-driven strategies for modelling, control and analysis of systems.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pkergus/pkergus.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
