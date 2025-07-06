@@ -1218,7 +1218,10 @@ input[type="radio"] + label:before {
   position: relative; }
   .image img {
     border-radius: 0.375em;
-    display: block; }
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain; }
   .image.left, .image.right {
     max-width: 40%; }
     .image.left img, .image.right img {
