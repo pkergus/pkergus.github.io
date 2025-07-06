@@ -1516,6 +1516,20 @@ button,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
+  .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f56a6a; /* green, or change to any color you like */
+    color: black; /* text color */
+    text-decoration: none;
+    border-radius: 5px; /* optional: rounded corners */
+    font-weight: bold;
+    border: none;
+  }
+
+  .button-link:hover {
+    background-color: black; /* slightly darker on hover */
+  }
   button:hover,
   .button:hover {
     background-color: rgba(245, 106, 106, 0.05); }
