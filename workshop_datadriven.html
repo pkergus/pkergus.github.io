@@ -81,7 +81,7 @@
                     <td>Sept. 30th</td>
                     <td>15h-15h30</td>
                     <td>Jean-Philippe Condomines</td>
-                    <td>To be announced</td>
+                    <td>Restricted Model-Free Control</td>
                 </tr>
                 <tr>
                     <td>Sept. 30th</td>
@@ -169,18 +169,71 @@
             <h2>Speakers</h2>									
         </header>
         <ul>
-            <li><strong>Cédric Join </strong>(CRAN, Université de Lorraine)</li>
-            <li><strong>Michel Fliess </strong>(LIX, Ecole Polytechnique)</li>
-            <li><strong>Jean-Philippe Condomines</strong>(ENAC)</li>
+            <li><strong>Cédric Join </strong>(CRAN, Université de Lorraine)
+            <br><i>Commande sans modèle et à modèle partiel</i></li>
+            <li><strong>Michel Fliess </strong>(LIX, Ecole Polytechnique)
+            <br><i>Vers une commande prédictive sans modèle : possibles connexions avec l'IA.</i></li>
+            <li><strong>Jean-Philippe Condomines</strong>(ENAC)
+            <br><i>Restricted Model-Free Control</i></li>
             <li><strong>Antoine Girard </strong>(L2S, CNRS)
+            <br><i>Safe learning-based nonlinear model predictive control using data-driven set-valued models</i>
+            <br>Corresponding papers : 
+            <ul>
+                <li>Makdesi, A., Girard, A., & Fribourg, L. (2024). <i>Data-Driven Models of Monotone Systems</i>. IEEE Transactions on Automatic Control, 69(8), 5294-5309. <a href="https://ieeexplore.ieee.org/abstract/document/10373122/">Link</a></li>
+                <li>Makdesi, A., Girard, A., & Fribourg, L. (2023). <i>Safe learning-based model predictive control using the compatible models approach</i>. European Journal of Control, 74, 100849. <a href="https://www.sciencedirect.com/science/article/pii/S094735802300078X">Link</a></li>
+            </ul></li>
             <li><strong>Mayank Jha </strong>(CRAN, CNRS)
+            <br><i>Safe Reinforcement Learning with provable guarantees: Recent Advancements</i></li>
             <li><strong>Oumayma Khattabi </strong>(doctorante au L2S sous la direction de Sorin Olaru et Matteo Tacchi)</li>
             <li><strong>Alexandre Faye-Bedrin </strong>(doctorant à l'IETR sous la direction de Romain Bourdais et Stanislav Aranovskiy)</stanislav.aranovskiy></li>
-            <li><strong>Pauline Kergus </strong>(LAPLACE, CNRS)</li>
-            <li><strong>Charles Poussot-Vassal </strong>(ONERA)</li>
-            <li><strong>Romain Postoyan </strong>(CRAN, CNRS)</li>
-            <li><strong>Vincent Andrieu </strong>(LAGEPP, CNRS)</li>
-            <li><strong>Moein Sarbandi </strong>(doctorant au LS2N sous la direction de Franck Plestan et Mohamed Hamida)</li>
+            <li><strong>Pauline Kergus </strong>(LAPLACE, CNRS)
+            <br><i>Data-driven controller design in the Loewner framework</i></li>
+            <li><strong>Charles Poussot-Vassal </strong>(ONERA)
+            <br> <i>The Loewner Framework, the Kolmogorov Superposition Theorem and the Curse of Dimensionality</i>
+            <br> We extend the Loewner framework to multivariate (dynamical) functions (and systems) with an arbitrary number "n" of variables (or parameters).
+            The presentation go through the following contributions: (i) first, we show how from a n-dimensional data tensor we can construct an approximating
+            n-variable rational function; (ii) second, we detail a methodology to both reduce the computational burden and memory needs to achieve (i) with exact
+            arithmetic, by replacing the null-space construction of a (large-scale) n-dimensional Loewner matrix, with a series of null-space construction of 
+            (limited size) 1-dimensional Loewner matrices; (iii) third, as a consequence of (ii), we show that the proposed approach achieves variables decoupling
+            and provides a scalable numerical approach to the Kolmogorov Superposition Theorem applied to rational functions, bridging the gap between approximation
+            theory and the neural network community. A collection of numerical examples and method comparison illustrates the effectiveness and scalability of 
+            the proposed method and its ability to tame the Curse of Dimensionality.
+            <br> Corresponding paper : <i>On the Loewner framework, the Kolmogorov superposition theorem, and the curse of dimensionality</i>, Athanasios C. Antoulas,
+            Ion Victor Gosea, Charles Poussot-Vassal, preprint, 2025. <a href="https://arxiv.org/abs/2405.00495">Link</a>
+            <br></li>
+            <li><strong>Romain Postoyan </strong>(CRAN, CNRS)
+            <br><i>A hybrid systems framework for data-based adaptive control of linear time-varying systems</i>
+            <br>We consider the problem of stabilization of unknown discrete-time linear time-varying systems using an adaptive data-driven control approach. 
+            The controller is defined as a linear state-feedback law whose gain is adapted to the plant changes through a data-based event-triggering rule. 
+            To do so, we monitor the evolution of a data-based Lyapunov function along the solution. When this Lyapunov function does not satisfy a designed 
+            desirable condition, an episode is triggered to update the controller gain and the corresponding Lyapunov function using the last collected 
+            data. The resulting closed-loop dynamics hence exhibits both physical jumps, due to the system dynamics, and episodic jumps, which naturally 
+            leads to a hybrid discrete-time system. We leverage the inherent robustness of the controller and provide general conditions under which various 
+            stability notions can be established for the system. Two notable cases where these conditions can be established a-priori based on system’s properties 
+            and time-variations are treated, and numerical results illustrating the relevance of the approach and comparing it with alternative approaches are 
+            discussed. This is a joint work with Andrea Iannelli (Univ. of Stuttgart, Germany).</li>
+            <li><strong>Vincent Andrieu </strong>(LAGEPP, CNRS)
+            <br><i>A nonlinear KKL framework for theoretical analysis and guarantees of neural network observers</i>
+            <br>This presentation addresses the state estimation problem for nonlinear dynamical systems. Modern approaches that use Recurrent Neural Networks (RNNs)
+            for the observer’s internal dynamics and Multi-Layer Perceptrons (MLPs) for the output mapping are popular but often lack theoretical guarantees. We show
+            how these structures can be analyzed through the lens of Kazantzis-Kravaris-Luenberger (KKL) observers. We extend this theory to the case where the RNN 
+            implements nonlinear contracting dynamics, leveraging the theory of input-driven contracting systems. We demonstrate the existence of a transformation 
+            enabling state reconstruction, analogous to the KKL map, and prove that the structure comprising a Contracting Nonlinear Filter (implementable by an
+            RNN) and an MLP output map constitutes a tunable observer, thereby providing convergence guarantees. Finally, we discuss the potential benefits of using specific 
+            nonlinearities to improve the trade-off between convergence speed and noise robustness.</li>
+            <li><strong>Moein Sarbandi </strong>(doctorant au LS2N sous la direction de Franck Plestan et Mohamed Hamida)
+            <br><i>Data-Based Sliding Mode Control - Application to Floating Offshore Wind Turbines</i>
+            <br>This talk presents a data-driven control approach combining online neural networks with sliding
+            mode theory to handle nonlinear systems with unknown dynamics. The control design employs
+            an integral sliding mode control (ISMC) approach enhanced by two neural network (NN) approx-
+            imators. These NNs are adapted online using Lyapunov-based adaptation laws and require no
+            offline pre-training. This ensures real-time adaptability and robustness against disturbances and
+            modeling uncertainties.
+            As a case study, the framework is applied to a floating offshore wind turbine (FOWT) operating
+            in above-rated wind conditions, where aerodynamic and hydrodynamic complexities pose major
+            control challenges. Simulations using the NREL 5-MW turbine model within the OpenFAST
+            environment demonstrate that the proposed method significantly outperforms both standard ISMC
+            and the widely used reference open-source controller (ROSCO)</li>
         </ul>
     </section>
     <section id="practical_information">
