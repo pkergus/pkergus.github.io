@@ -8,6 +8,87 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+		body {
+		font-family: Arial, sans-serif;
+		line-height: 1.6;
+		margin: 0;
+		padding: 20px;
+		background-color: #f9f9f9;
+		}
+		h1 {
+		text-align: center;
+		color: #333;
+		}
+		#tag-filter {
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		margin: 20px auto;
+		padding: 10px;
+		font-size: 16px;
+		}
+		.posts-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px;
+		}
+		.post-vignette {
+		background: white;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		padding: 20px;
+		width: 300px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		transition: transform 0.2s;
+		}
+		.post-vignette:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		}
+		.post-vignette a {
+		text-decoration: none;
+		color: inherit;
+		}
+		.post-vignette h3 {
+		margin-top: 10px;
+		color: #2c3e50;
+		}
+		.post-vignette .excerpt {
+		color: #666;
+		font-size: 0.9em;
+		}
+		.post-vignette .post-image {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+		border-radius: 5px;
+		}
+		.tags {
+		margin-top: 10px;
+		}
+		.tag {
+		display: inline-block;
+		background-color: #e0e0e0;
+		color: #333;
+		padding: 3px 8px;
+		margin-right: 5px;
+		border-radius: 3px;
+		font-size: 0.8em;
+		}
+		.tag:hover {
+		background-color: #d0d0d0;
+		}
+		.no-results {
+		text-align: center;
+		width: 100%;
+		color: #666;
+		font-style: italic;
+		}
+	</style>
 	</head>
 	<body class="is-preload">
 
@@ -31,9 +112,79 @@
 							<!-- Content -->									
 								<section>
 								<header class="major">
-									<h2>In construction</h2>
+									<h1>Blog</h1>
 								</header>
-                  
+								
+								<!-- <input type="text" id="tag-filter" placeholder="Filter by tag (e.g., AI, gender)..."> -->
+
+								<div class="posts-container" id="posts-container">
+									<!-- Post vignettes will be inserted here by JavaScript -->
+								</div>
+
+								<script>
+								// Sample data: replace with your actual posts
+								const posts = [
+								// {
+								// 	title: "Data-Driven Control for Energy Systems",
+								// 	excerpt: "Exploring how data-driven techniques can improve the control of renewable energy systems.",
+								// 	url: "posts/post1.html",
+								// 	tags: ["AI", "Ecological Transition"]
+								// },
+								// {
+								// 	title: "Gender Bias in STEM: A Data Perspective",
+								// 	excerpt: "Analyzing gender representation in scientific publications and conferences.",
+								// 	url: "posts/post2.html",
+								// 	tags: ["Gender and Science", "AI"]
+								// },
+								{
+									title: "Am I invited for my research or because of my gender? - My unexpected plenary and the conversations it sparked ",
+									excerpt: "This doubt is all too familiar for female researchers, in STEM at least. Here is my take on it to reclaim confidence and own our place.",
+									url: "blog_posts/2025-11-Am_I_invited_for_my_research_or_my_gender.html",
+									image: "",
+									tags: ["Gender equality"]
+								}
+								];
+
+								const container = document.getElementById('posts-container');
+
+								function renderPosts(filter = '') {
+								container.innerHTML = '';
+								const lowerFilter = filter.toLowerCase();
+
+								const filteredPosts = posts.filter(post =>
+									filter === '' ||
+									post.tags.some(tag => tag.toLowerCase().includes(lowerFilter))
+								);
+
+								if (filteredPosts.length === 0) {
+									container.innerHTML = '<div class="no-results">No posts found for this tag.</div>';
+									return;
+								}
+
+								filteredPosts.forEach(post => {
+									const postElement = document.createElement('div');
+									postElement.className = 'post-vignette';
+									postElement.innerHTML = `
+									<a href="${post.url}">
+										<h3>${post.title}</h3>
+										<p class="excerpt">${post.excerpt}</p>
+										<div class="tags">
+										${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+										</div>
+									</a>
+									`;
+									container.appendChild(postElement);
+								});
+								}
+
+								// Initial render
+								renderPosts();
+
+								// Filter posts as the user types
+								document.getElementById('tag-filter').addEventListener('input', function(e) {
+								renderPosts(e.target.value);
+								});
+							</script>
                 <!--
                     <p>My research interests are control, system theory, model order reduction and system identification. In particular, I aim at proposing data-driven strategies for modelling, control and analysis of systems, with a specific focus on energy systems.</p>
                   
